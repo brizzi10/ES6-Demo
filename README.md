@@ -12,11 +12,11 @@ Default function parameters allow formal parameters to be initialized with defau
 
 In the second call here, even if the second argument is set explicitly to undefined (though not null) when calling, the value of the color argument is the default one.
 
+'''javascript
 function setBackgroundColor(element, color = 'rosybrown') {
   element.style.backgroundColor = color;
 }
 
-'''javascript
 setBackgroundColor(someDiv);            // color set to 'rosybrown'
 setBackgroundColor(someDiv, undefined); // color set to 'rosybrown' too
 setBackgroundColor(someDiv, 'blue');    // color set to 'blue'
