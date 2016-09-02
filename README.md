@@ -37,7 +37,7 @@ The two advantages of an arrow function are shorter function statements and a le
 
 without es6:
 ```javascript
-var hobbies = ["facial hair", "standing on the shoulders of giants", "bringing back 'that's dope'"]
+var hobbies = ["facial hair(work in progress)", "standing on the shoulders of giants", "bringing back 'that's dope'"]
 var hobbyHype = hobbies.map(function(hobby){
                             return (hobby+' at a high level!');
                             })
@@ -45,10 +45,10 @@ var hobbyHype = hobbies.map(function(hobby){
 ```
 with ES6:
 ```javascript
-var hobbyHype = hobbies.map(hobby => hobby + 'at a high level!' )
+var hobbyHype = hobbies.map(hobby => hobby + ' at a high level!' )
 
 console output:
-["facial hair at a high level!", "standing on the shoulders of giants at a high level!", "bringing back 'that's dope' at a high level!"]
+["facial hair(work in progress) at a high level!", "standing on the shoulders of giants at a high level!", "bringing back 'that's dope' at a high level!"]
 ```
 As seen above, functions with a single parameter also do not need parenthesis around their params, and single line functions have an implicit return.  
 
