@@ -37,7 +37,11 @@ Arrow functions utilize the => token in ES6, and are always anonymous. The two m
 
 without es6:
 ```javascript
-var hobbies = ["facial hair(work in progress)", "standing on the shoulders of giants", "bringing back 'that's dope'"]
+var hobbies = [
+  "facial hair(work in progress)",
+  "standing on the shoulders of giants",
+  "bringing back 'that's dope'"
+]
 var hobbyHype = hobbies.map(function(hobby){
                             return (hobby+' at a high level!');
                             })
