@@ -16,7 +16,7 @@ function setBackgroundColor(element, color = 'rosybrown') {
   element.style.backgroundColor = color;
 }
 
-'''js
+'''javascript
 setBackgroundColor(someDiv);            // color set to 'rosybrown'
 setBackgroundColor(someDiv, undefined); // color set to 'rosybrown' too
 setBackgroundColor(someDiv, 'blue');    // color set to 'blue'
@@ -26,7 +26,7 @@ setBackgroundColor(someDiv, 'blue');    // color set to 'blue'
 
 The default argument gets evaluated at call time, so unlike e.g. in Python, a new object is created each time the function is called.
 
-'''js
+'''javascript
 function append(value, array = []) {
   array.push(value);
   return array;
