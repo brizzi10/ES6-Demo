@@ -77,3 +77,98 @@ function Person() {
 Now, the arrow function runs the function without creating its own context for `this`, and the age value should increase as intended.
 
 Arrow function expressions don't work especially well in method functions, though. You shouldn't worry about them if you're not working with non-method functions.
+
+
+
+
+
+### Object Methods Shorthand
+```js
+//
+// ES 5 **
+//
+
+var dog = {
+  bark: function() {
+
+  },
+  layDown: function () {
+
+  }
+}
+
+//
+// ES 6 **
+//
+var dog = {
+  bark() {},
+  layDown() {}
+}
+```
+
+### Object Properties Shorthand
+```js
+//
+// ES 5 **
+//
+function createCar(make, model) {
+  return {
+    type: "car",
+    make: make,
+    model: model
+  };
+}
+
+var ferrari = createCar("Ferrari", "488 GTB");
+
+/* RETURNS */
+{
+  type: "car",
+  make: "Ferrari",
+  model: "488 GTB"
+}
+
+
+
+//
+// ES 6 **
+//
+function createCar(make, model) {
+  return {
+    type: 'car',
+    make,
+    model,
+  };
+}
+
+var ferrari = createCar("Ferrari", "488 GTB");
+
+/* RETURNS */
+{
+  type: "car",
+  make: "Ferrari",
+  model: "488 GTB"
+}
+```
+
+### Computed Property Names
+
+```js
+//
+// ES 6 **
+//
+
+var a = 1;
+var b = 2;
+
+var obj = {
+  [a + b]: 12
+}
+
+console.log(obj);
+
+/* RETURNS */
+{
+  3: 12
+}
+```
