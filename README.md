@@ -15,17 +15,17 @@ function setBackgroundColor(element, color = 'rosybrown') {
   element.style.backgroundColor = color;
 }
 
-'''js
+```js
 setBackgroundColor(someDiv);            // color set to 'rosybrown'
 setBackgroundColor(someDiv, undefined); // color set to 'rosybrown' too
 setBackgroundColor(someDiv, 'blue');    // color set to 'blue'
-'''
+```
 
 ### Evaluated at call time
 
 The default argument gets evaluated at call time, so unlike e.g. in Python, a new object is created each time the function is called.
 
-'''js
+```js
 function append(value, array = []) {
   array.push(value);
   return array;
@@ -33,7 +33,7 @@ function append(value, array = []) {
 
 append(1); //[1]
 append(2); //[2], not [1, 2]
-'''
+```
 
 ##Arrow functions
 An arrow function is an anonymous function expression that doesn't change the value of `this`.
