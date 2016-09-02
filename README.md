@@ -48,7 +48,7 @@ with ES6:
 var hobbyHype = hobbies.map(hobby => hobby + 'at a high level!' )
 
 console output:
-["facial hair at a high level", "standing on the shoulders of giants at a high level", "bringing back 'that's dope' at a high level"]
+["facial hair at a high level!", "standing on the shoulders of giants at a high level!", "bringing back 'that's dope' at a high level!"]
 ```
 As seen above, functions with a single parameter also do not need parenthesis around their params, and single line functions have an implicit return.  
 
