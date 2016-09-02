@@ -35,7 +35,7 @@ append(2); //[2], not [1, 2]
 ##Arrow functions
 Arrow functions utilize the => token in ES6, and are always anonymous. The two major advantages of an arrow function are shorter function statements and a lexical 'this'. The shorter syntax can be seen in the comparison below.
 
-without es6:
+without ES6:
 ```javascript
 var hobbies = [
   "facial hair(work in progress)",
@@ -53,7 +53,7 @@ var hobbyHype = hobbies.map(hobby => hobby + ' at a high level!' )
 
 console output:
 [
-  "facial hair(work in progress) at a high level!", 
+  "facial hair(work in progress) at a high level!",
 "standing on the shoulders of giants at a high level!",
 "bringing back 'that's dope' at a high level!"
 ]
