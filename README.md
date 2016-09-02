@@ -33,7 +33,26 @@ append(2); //[2], not [1, 2]
 ```
 
 ##Arrow functions
-An arrow function is an anonymous function expression that doesn't change the value of `this`.
+The two advantages of an arrow function are shorter function statements and a lexical 'this'. The shorter syntax can be seen in the comparison below.
+
+without es6:
+```javascript
+var hobbies = ["facial hair", "standing on the shoulders of giants", "bringing back 'that's dope'"]
+var hobbyHype = hobbies.map(function(hobby){
+                            return (hobby+' at a high level!');
+                            })
+
+```
+with ES6:
+```javascript
+var hobbyHype = hobbies.map(hobby => hobby + 'at a high level!' )
+
+console output:
+["facial hair at a high level", "standing on the shoulders of giants at a high level", "bringing back 'that's dope' at a high level"]
+```
+As seen above, functions with a single parameter also do not need parenthesis around them.
+
+Arrow functions also grab the value value of `this` from their surroundings and this value will not change.
 
 When one wants to call the `this` function repeatedly over the course of your code, using an arrow function is a way to execute functions without throwing that off or needing to save `this` to a variable.
 
@@ -74,98 +93,3 @@ function Person() {
 Now, the arrow function runs the function without creating its own context for `this`, and the age value should increase as intended.
 
 Arrow function expressions don't work especially well in method functions, though. You shouldn't worry about them if you're not working with non-method functions.
-
-
-
-
-
-### Object Methods Shorthand
-```js
-//
-// ES 5 **
-//
-
-var dog = {
-  bark: function() {
-
-  },
-  layDown: function () {
-
-  }
-}
-
-//
-// ES 6 **
-//
-var dog = {
-  bark() {},
-  layDown() {}
-}
-```
-
-### Object Properties Shorthand
-```js
-//
-// ES 5 **
-//
-function createCar(make, model) {
-  return {
-    type: "car",
-    make: make,
-    model: model
-  };
-}
-
-var ferrari = createCar("Ferrari", "488 GTB");
-
-/* RETURNS */
-{
-  type: "car",
-  make: "Ferrari",
-  model: "488 GTB"
-}
-
-
-
-//
-// ES 6 **
-//
-function createCar(make, model) {
-  return {
-    type: 'car',
-    make,
-    model,
-  };
-}
-
-var ferrari = createCar("Ferrari", "488 GTB");
-
-/* RETURNS */
-{
-  type: "car",
-  make: "Ferrari",
-  model: "488 GTB"
-}
-```
-
-### Computed Property Names
-
-```js
-//
-// ES 6 **
-//
-
-var a = 1;
-var b = 2;
-
-var obj = {
-  [a + b]: 12
-}
-
-console.log(obj);
-
-/* RETURNS */
-{
-  3: 12
-}
-```
