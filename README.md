@@ -33,7 +33,7 @@ append(2); //[2], not [1, 2]
 ```
 
 ##Arrow functions
-The two advantages of an arrow function are shorter function statements and a lexical 'this'. The shorter syntax can be seen in the comparison below.
+Arrow functions utilize the => token in ES6, and are always anonymous. The two major advantages of an arrow function are shorter function statements and a lexical 'this'. The shorter syntax can be seen in the comparison below.
 
 without es6:
 ```javascript
